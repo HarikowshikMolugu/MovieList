@@ -2,13 +2,17 @@
 .total {
   background-color: #141414;
   color: white;
-
+  box-sizing: border-box;
   min-height: 100vh;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-.total > .row {
-  overflow-x: auto;
-  flex-wrap: nowrap;
+.span{
+  color: yellow;
+  
 }
 .loading-container {
   display: flex;
@@ -189,6 +193,17 @@
   font-size: 10px;
   color: cyan;
 }
+.back-button {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 @media (max-width: 768px) {
   .header {
@@ -245,7 +260,7 @@
     margin: 50px;
   }
   .movie-details {
-    
+     margin-top: 30px;
     flex-direction: column;
     padding: 20px;
   }
@@ -264,5 +279,10 @@
   .movie-info p {
   
     font-size: 14px;
+  }
+  .back-button {
+    top: 200px;
+    left: 20px;
+   
   }
 }
