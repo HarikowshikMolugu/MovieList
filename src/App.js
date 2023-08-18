@@ -79,7 +79,9 @@ function App() {
   return (
     <div className='total'>
       <div className='header'>
-        <div className='title'>M<span className='span'>o</span>V<span className='span'>i</span>E<span className='span'>s</span></div>
+        <div className='title'><div class="glitch-wrapper">
+   <div class="glitch" data-glitch="MoViEs">MoViEs</div>
+</div></div>
         <div className='search-controls'>
           <input
             type='text'

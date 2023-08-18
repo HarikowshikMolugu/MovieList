@@ -10,7 +10,7 @@ const MovieDetails = (props) => {
 
   const search = async () => {
     // Replace with your actual API key
-    const url = `http://www.omdbapi.com/?i=${props.id}&apikey=72024e41`;
+    const url = `https://www.omdbapi.com/?i=${props.id}&apikey=72024e41`;
 
     const response = await fetch(url);
     const responseJson = await response.json();
