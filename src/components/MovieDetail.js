@@ -3,13 +3,14 @@ import '../App.css'; // Import your custom CSS for MovieDetails component
 
 const MovieDetails = (props) => {
   const [movieDetails, setMovieDetails] = useState({});
-  const back ="< Back"
+  const back = "< Back";
+  
   useEffect(() => {
     search();
   }, []);
 
   const search = async () => {
-    // Replace with your actual API key
+  
     const url = `https://www.omdbapi.com/?i=${props.id}&apikey=72024e41`;
 
     const response = await fetch(url);
@@ -19,19 +20,7 @@ const MovieDetails = (props) => {
 
   // Generate the dynamic link based on movieDetails
   const generateLink = () => {
-    const title = movieDetails.Title
-      ? movieDetails.Title
-          .toLowerCase()
-          .replace(/[^\w\s]/g, '-') // Replace special characters with a hyphen
-          .replace(/\s+/g, '-') // Replace consecutive spaces with a single hyphen
-          .replace(/-+/g, '-') // Replace consecutive hyphens with a single hyphen
-          .replace(/^-|-$/g, '') // Remove hyphens from the beginning or end
-      : '';
-
-    const year = movieDetails.Released ? movieDetails.Released.substring(movieDetails.Released.length - 4) : '';
-    const language = movieDetails.Language ? movieDetails.Language.toLowerCase().split(',')[0] : '';
-
-    return `https://ww24.watchmovierulz.to/${title}-${year}-${language}/full-movie-watch-online-free-5-6580.html`;
+    return `https://www.youtube.com/results?search_query=${movieDetails.Title}+official+trailer`;
   };
 
   const goBack = () => {
@@ -64,9 +53,9 @@ const MovieDetails = (props) => {
           <p><strong>IMDb Rating:</strong> {movieDetails.imdbRating}</p>
           <p><strong>Box Office:</strong> {movieDetails.BoxOffice}</p>
           <p>
-            <strong>Link:</strong>
+            <strong>Trailer:</strong>
             <a style={{ textDecoration: "none" }} href={generateLink()} target="_blank" rel="noopener noreferrer">
-              Get Movie
+              Watch Trailer
             </a>
           </p>
           
