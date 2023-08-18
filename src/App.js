@@ -102,8 +102,8 @@ function App() {
         </div>
       </div>
       {loading ? (
-        <div className='loading-container'>
-          <div className='loading'>Loading...</div>
+        <div style={{display:'flex',justifyContent:'center',alignItems:'center',minHeight:'100vh'}}>
+        <div class="spinner"></div>
         </div>
       ) : (
         <div className='row'>
